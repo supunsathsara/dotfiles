@@ -33,3 +33,11 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 #pnpm
 alias pn=pnpm
+
+# pnpm
+export PNPM_HOME="/Users/savindusupun/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
