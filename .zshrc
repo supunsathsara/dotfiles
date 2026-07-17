@@ -12,6 +12,11 @@ source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# z - jump to frequently used directories
+export _Z_DATA="$HOME/.z"
+export _Z_MAX_SCORE=9000
+# export _Z_EXCLUDE_DIRS=("/Volumes" "$HOME/Library" "$HOME/.Trash")
+. /opt/homebrew/etc/profile.d/z.sh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -28,3 +33,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# Added by Antigravity IDE
+export PATH="/Users/savindusupun/.antigravity-ide/antigravity-ide/bin:$PATH"
